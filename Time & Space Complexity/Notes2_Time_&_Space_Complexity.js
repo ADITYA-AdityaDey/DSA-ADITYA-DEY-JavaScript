@@ -114,3 +114,48 @@ Example 5:
             // Time Complexity = O(nlog2n) [Multiplication for indepedent itteration]
 
 */
+
+
+
+/*
+Example 6:
+
+    let i = 1;
+    let k = 1;
+
+    while(k <= n){
+        i = i + 1;
+        k = k + 1;
+    }
+
+
+    // so here, is  dependency
+
+        i=1         
+        k=1         1<=n ----------> 1
+
+
+        i=2         
+        k=3         3<=n ----------> 2+1
+
+
+        i=3         
+        k=6        6<=n ------------> 3+2+1
+
+
+        i=4
+        k=10       10<=n ------------> 4+3+2+1
+
+        and so on........
+
+
+        so here, i(i+1)/2 <= n (some of n natural numbers)(removethe constant that is /2)
+                 i*2 + i <= n
+
+                 i*2 = n (consider the highest grade that is i*2 from i*2 + i)
+                 i= (root n)
+
+
+            so, Time Complexity is O(root n)
+
+*/
