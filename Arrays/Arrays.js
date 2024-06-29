@@ -112,3 +112,75 @@ const newScore6 = score6.find((item, index, arrays) => {
     return item > 50;
 });
 console.log(newScore6);
+
+
+
+// Spread & Rest Operators
+const score7 = [1, 2, 3, 4, 5];
+const score8 = [6, 7, 8, 9, 10];
+
+const totalScore = [...score7, ...score8]; // Spread Operator
+console.log(totalScore);
+
+
+function restOp(...values){ // Rest Operator
+    return values;
+}
+console.log(restOp(score7, score8, `JavaScript`));
+
+
+
+// concat() in Arrays
+const score9 = [1, 2, 3];
+const score10 = [4, 5, 6];
+const concatArray = score9.concat(score10);
+console.log(concatArray);
+
+
+
+// slice() in Arrays
+const papersArr = [`DSA`, `DAA`, `OOP`];
+const sliceArr = papersArr.slice(0,2);
+const anotherSliceArr1 = papersArr.slice(-1);
+const anotherSliceArr2 = papersArr.slice(-2);
+
+console.log(sliceArr);
+console.log(anotherSliceArr1);
+console.log(anotherSliceArr2);
+
+
+
+// splice() in Arrays
+const arrforSplice = [`JavaScript`, `DSA`, `OS`];
+
+arrforSplice.splice(0, 2, `Javavcript`);
+
+console.log(arrforSplice);
+
+
+
+// fill() in Arrays
+const arrforFill = [1, 2, 3, 4, 5];
+arrforFill.fill(1, 3);
+console.log(arrforFill);
+
+
+
+// findindex() in Arrays
+const arrforFI = [10, 20, 30, 40, 50];
+const findIndex = arrforFI.findIndex((item) => item === 40);
+
+console.log(findIndex);
+
+
+
+// flat() in Arrays
+const arrforFlat = [1, 2, [3, 4, 5, [6, 7], 8, 9], 10];
+
+const flattendArr = arrforFlat.flat(2);
+
+console.log(flattendArr);
+
+
+
+// 
