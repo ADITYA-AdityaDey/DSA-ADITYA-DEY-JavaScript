@@ -183,4 +183,25 @@ console.log(flattendArr);
 
 
 
-// 
+// reverse() in Arrays
+const arrforReverse = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const reversedArr = arrforReverse.reverse();
+
+console.log(reversedArr);
+
+
+
+// sort() in Arrays
+const arrforSort = [23, 46, 87, 89, 6, 32, 14, 65];
+
+const sortedArr = arrforSort.sort((a, b) => a - b);
+
+console.log(sortedArr);
+
+
+
+//////////////////////////////// DSA Interview Question on Array in JavaScript /////////////////////////////////////
+
+// Question 1: Second Largest Number
+
