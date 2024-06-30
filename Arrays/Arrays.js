@@ -205,3 +205,50 @@ console.log(sortedArr);
 
 // Question 1: Second Largest Number
 
+// [10, 20, 50, 10, 45, 78, 98, 100, 100]
+
+
+
+// Solution 1: Brute Force Approach
+
+function secondLargest(arrforSecondLargest) {
+    const uniqueEleArray = Array.from(new Set(arrforSecondLargest)); // O(n)
+
+    uniqueEleArray.sort((a, b) => { // O(nlogn)
+        return b - a;
+    });
+
+    if (uniqueEleArray.length >= 2){
+        return uniqueEleArray[1];
+    } else {
+        return -1;
+    }
+}
+
+console.log(secondLargest([10, 20, 50, 10, 45, 78, 98, 100, 100]));
+
+// Time Complexity: O(nlogn)
+
+
+
+// Solution 2: Optimised Approach (Not using any inbuilt method)
+
+function secondLargestFun(arrayforSecondLargestEle){
+    let largestEle = Number.NEGATIVE_INFINITY;
+    let secondLargestEle = Number.NEGATIVE_INFINITY;
+
+    for (let i = 0; i <= arrayforSecondLargestEle.length; i++) {    // O(Array.length) => O(n)
+        if(arrayforSecondLargestEle[i] > largestEle) {
+            secondLargestEle = largestEle;
+            largestEle = arrayforSecondLargestEle[i];
+        } else if (arrayforSecondLargestEle[i] != largestEle && arrayforSecondLargestEle[i] > secondLargestEle) {
+            secondLargestEle = arrayforSecondLargestEle[i];
+        }
+    }
+    return secondLargestEle;
+}
+
+console.log(secondLargestFun(([10, 20, 50, 10, 45, 78, 98, 100, 100])));
+
+// Time Complexity: O(Array.length) => O(n)
+// Space Complexity: O(1) {because create only one Array}
