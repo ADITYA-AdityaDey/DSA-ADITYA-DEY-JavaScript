@@ -252,3 +252,43 @@ console.log(secondLargestFun(([10, 20, 50, 10, 45, 78, 98, 100, 100])));
 
 // Time Complexity: O(arrayforSecondLargestEle.length) => O(n)
 // Space Complexity: O(1) {because create only one Array}
+
+
+
+
+
+//////////////// Question 2 /////////////////////////////////
+// Question 2: Rotate array by k
+// Given an integer array nums, rotate the array to the right by k stepa.
+// where k is non negative
+
+// Input: nums = [1, 2, 3, 4, 5, 6, 7], k = 3 ----> Output: [5, 6, 7, 1, 2, 3, 4]
+// Input: nums = [-1, -100, 3, 99], k = 2 ----------> Output: [3, 99, -1, -100]
+
+
+
+// Process: [1, 2, 3, 4, 5, 6, 7] => [7, 1, 2, 3, 4, 5, 6] => [6, 7, 1, 2, 3, 4, 5] => [5, 6, 7, 1, 2, 3, 4]
+
+
+// Solution 1: Using inbuilt Functions
+
+function rotateArr(nums, k){
+    let size = nums.length;
+
+    if (size > k) {
+        k = k % size;
+    }
+
+    const rotated = nums.splice(size - k, size); // [5, 6, 7]       // O(n)
+    nums.unshift(...rotated); // O(n)
+
+    return nums;
+}
+
+// Time Complexiyt: O(n) + O(n) = O(n)
+
+
+
+
+// Solution 2: without inbuit functions
+
