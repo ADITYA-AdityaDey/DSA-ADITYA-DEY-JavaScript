@@ -287,6 +287,12 @@ function rotateArr(nums, k){
 
     return nums;
 }
+console.log(rotateArr([1, 2, 3, 4, 5, 6, 7], 3));
+console.log(rotateArr([-1, -100, 3, 99], 2));
+
+
+
+
 
 // Time Complexiyt: O(n) + O(n) = O(n)
 
