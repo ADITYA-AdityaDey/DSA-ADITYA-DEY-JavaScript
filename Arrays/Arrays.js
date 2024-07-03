@@ -278,7 +278,7 @@ console.log(secondLargestFun(([10, 20, 50, 10, 45, 78, 98, 100, 100])));
 function rotateArr(nums, k){
     let size = nums.length;
 
-    if (size > k) {
+    if (size < k) {
         k = k % size;
     }
 
@@ -298,7 +298,7 @@ function rotateArr(nums, k){
 function rotateArray(nums, k) {
     let size = nums.length;
 
-    if (size > k) {
+    if (size < k) {
         k = k % size;
     }
 
