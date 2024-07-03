@@ -267,10 +267,13 @@ console.log(secondLargestFun(([10, 20, 50, 10, 45, 78, 98, 100, 100])));
 
 
 
-// Process: [1, 2, 3, 4, 5, 6, 7] => [7, 1, 2, 3, 4, 5, 6] => [6, 7, 1, 2, 3, 4, 5] => [5, 6, 7, 1, 2, 3, 4]
+
 
 
 // Solution 1: Using inbuilt Functions
+
+
+// Process: [1, 2, 3, 4, 5, 6, 7] => [7, 1, 2, 3, 4, 5, 6] => [6, 7, 1, 2, 3, 4, 5] => [5, 6, 7, 1, 2, 3, 4]
 
 function rotateArr(nums, k){
     let size = nums.length;
