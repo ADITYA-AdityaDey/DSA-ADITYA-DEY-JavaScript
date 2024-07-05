@@ -123,7 +123,7 @@ const totalScore = [...score7, ...score8]; // Spread Operator
 console.log(totalScore);
 
 
-function restOp(...values){ // Rest Operator
+function restOp(...values) { // Rest Operator
     return values;
 }
 console.log(restOp(score7, score8, `JavaScript`));
@@ -140,7 +140,7 @@ console.log(concatArray);
 
 // slice() in Arrays
 const papersArr = [`DSA`, `DAA`, `OOP`];
-const sliceArr = papersArr.slice(0,2);
+const sliceArr = papersArr.slice(0, 2);
 const anotherSliceArr1 = papersArr.slice(-1);
 const anotherSliceArr2 = papersArr.slice(-2);
 
@@ -218,7 +218,7 @@ function secondLargest(arrforSecondLargest) {
         return b - a;
     });
 
-    if (uniqueEleArray.length >= 2){
+    if (uniqueEleArray.length >= 2) {
         return uniqueEleArray[1];
     } else {
         return -1;
@@ -233,12 +233,12 @@ console.log(secondLargest([10, 20, 50, 10, 45, 78, 98, 100, 100]));
 
 // Solution 2: Optimised Approach (Not using any inbuilt method)
 
-function secondLargestFun(arrayforSecondLargestEle){
+function secondLargestFun(arrayforSecondLargestEle) {
     let largestEle = Number.NEGATIVE_INFINITY;
     let secondLargestEle = Number.NEGATIVE_INFINITY;
 
     for (let i = 0; i <= arrayforSecondLargestEle.length; i++) {    // O(arrayforSecondLargestEle.length) => O(n)
-        if(arrayforSecondLargestEle[i] > largestEle) {
+        if (arrayforSecondLargestEle[i] > largestEle) {
             secondLargestEle = largestEle;
             largestEle = arrayforSecondLargestEle[i];
         } else if (arrayforSecondLargestEle[i] != largestEle && arrayforSecondLargestEle[i] > secondLargestEle) {
@@ -275,7 +275,7 @@ console.log(secondLargestFun(([10, 20, 50, 10, 45, 78, 98, 100, 100])));
 
 // Process: [1, 2, 3, 4, 5, 6, 7] => [7, 1, 2, 3, 4, 5, 6] => [6, 7, 1, 2, 3, 4, 5] => [5, 6, 7, 1, 2, 3, 4]
 
-function rotateArr(nums, k){
+function rotateArr(nums, k) {
     let size = nums.length;
 
     if (size < k) {
@@ -309,7 +309,7 @@ function rotateArray(nums, k) {
     }
 
     reverse(nums, 0, nums.length - 1); // it's reverse the whole array [7, 6, 5, 4, 3, 2, 1]            // O(n)
-    reverse(nums, 0, k-1); // it's reverse upto k time(5, 6, 7) [5, 6, 7, 4, 3, 2 ,1]                   // O(k)
+    reverse(nums, 0, k - 1); // it's reverse upto k time(5, 6, 7) [5, 6, 7, 4, 3, 2 ,1]                   // O(k)
     reverse(nums, k, nums.length - 1); // it's now reverse remaining part [5, 6, 7, 1, 2, 3, 4]         // O(n - k)
 
     return nums;
@@ -347,3 +347,19 @@ console.log(rotateArray([-1, -100, 3, 99], 2));
 
 // Time Complexity: O(n)   // remove the constanst from O(n) + O(k) + O(n - k) and get/choose the linear time complexity O(n)
 // Space Complexity: O(1) // because we don't create another array just use only on array
+
+
+
+
+
+
+//////////////// Question 3 ///////////////////
+// Question 3: Remove duplicates from sorted array
+// Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique elements appears only once.
+// The relative order of the elements should be kept the same. Then return the number of unique elements in nums.
+
+// Input: [1, 2, 2] --------> output: 2, [1, 2, _]
+// Input: [0, 0, 1, 1, 1, 2, 2, 3, 3, 4] -------------> 5, [0, 1, 2, 3, 4,_, _, _, _, _]
+
+
+
