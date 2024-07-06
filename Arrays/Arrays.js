@@ -363,3 +363,25 @@ console.log(rotateArray([-1, -100, 3, 99], 2));
 
 
 
+// Solution 1: Wuth inbuilt js methods
+
+// Process: [0, 0, 1, 1, 1, 2, 2, 3, 3, 4] ----> splice(i+1, i)
+
+function removeDuplicatesFun(nums) {
+    for (let i = 0; i < nums.length - 1; i++) {    // O(n)
+        if (nums[i] === nums[i+1]) {
+            nums.splice(i+1, 1);                   // O(1)
+            i--;
+        }
+    }
+    return nums.length;
+}
+
+console.log(removeDuplicatesFun([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]));
+
+
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
+
+
