@@ -378,6 +378,7 @@ function removeDuplicatesFun(nums) {
 }
 
 console.log(removeDuplicatesFun([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]));
+console.log(removeDuplicatesFun([1, 2, 2]));
 
 
 // Time Complexity: O(n)
@@ -385,3 +386,23 @@ console.log(removeDuplicatesFun([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]));
 
 
 
+// Solution 2: Without inbuilt Methods
+
+function removeDupliWithoutInbuiltMethod(nums) {
+    if (nums.length === 0) return 0;
+    let i = 0;
+
+    for (let j = 1; j < nums.length; j++) {
+        if (nums[i] !== nums[j]) {
+            i ++;
+            nums[i] = nums[j];
+        }
+    }
+    return i + 1;
+}
+console.log(removeDupliWithoutInbuiltMethod([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]));
+console.log(removeDupliWithoutInbuiltMethod([1, 2, 2]));
+
+
+// Time Complexity: O(n)
+// Space Complexity: O(1)
