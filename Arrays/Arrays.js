@@ -345,8 +345,8 @@ console.log(rotateArray([-1, -100, 3, 99], 2));
 
 
 
-// Time Complexity: O(n)   // remove the constanst from O(n) + O(k) + O(n - k) and get/choose the linear time complexity O(n)
-// Space Complexity: O(1) // because we don't create another array just use only on array
+// Time Complexity: O(n)   // remove the constant from O(n) + O(k) + O(n - k) and get/choose the linear time complexity O(n)
+// Space Complexity: O(1) // because i don't create another array just use only one array
 
 
 
@@ -363,7 +363,7 @@ console.log(rotateArray([-1, -100, 3, 99], 2));
 
 
 
-// Solution 1: Wuth inbuilt js methods
+// Solution 1: With inbuilt js methods
 
 // Process: [0, 0, 1, 1, 1, 2, 2, 3, 3, 4] ----> splice(i+1, i)
 
